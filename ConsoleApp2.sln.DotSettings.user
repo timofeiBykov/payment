@@ -1,0 +1,11 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=69dd9730_002D283f_002D4644_002D85c6_002D711580d027c3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Pay_NegativeAmount_ReturnsFalse" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C240F371-9478-40DC-AFAB-3FFA2D925098::net9.0::ConsoleApp2.Tests.PaymentMethodTests.Pay_NegativeAmount_ReturnsFalse&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b308f92e_002D0bcb_002D448f_002Dbd18_002D96c7d386b838/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PaymentFactoryTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::C240F371-9478-40DC-AFAB-3FFA2D925098::net9.0::ConsoleApp2.Tests.PaymentFactoryTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
