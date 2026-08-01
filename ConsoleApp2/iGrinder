@@ -1,4 +1,4 @@
 public interface iGrinder
 {
-	Task Grint(int grams);
+	 void Grint(int grams);
 }
