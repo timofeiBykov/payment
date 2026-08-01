@@ -1,23 +1,34 @@
 ﻿using ConsoleApp2;
 
-decimal balance = 2000;
-decimal priceToPay = 4000;
-
-var factory = new PaymentFactory();
-
-PayMethod payMethod = factory.Create(PaymentType.Card);
-
-
-if (priceToPay > balance)
+class Program
 {
-    Console.WriteLine("недостаточно средств");
-}
-else if (payMethod.Pay(priceToPay))
-{
-    balance -= priceToPay;
-}
+    static void Main(string[] args)
+    {
+        var waterTank = new WaterTank(1000);
+        var beanContainer = new BeanContainer(500);
+        var milkTank = new MilkTank(400);
+        var heater = new Heater();
+        var grinder = new Grinder();
 
-Console.WriteLine($"Balance: {balance}");
+        var coffeeMachine = new CoffeeMachine(
+            waterTank,
+            beanContainer,
+            milkTank,
+            heater,
+            grinder
+        );
 
+        bool result = coffeeMachine.MakeCoffee(CoffeeButton.Latte);
+
+        if (result)
+        {
+            Log.Information("Latte готов!");
+        }
+        else
+        {
+            Log.Information("Не хватает ресурсов");
+        }
+    }
+}
 
 
