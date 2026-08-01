@@ -1,0 +1,82 @@
+public class CoffeeMachine
+{
+    private IWaterTank _waterTank;
+    private IBeanContainer _beanContainer;
+    private IMilkTank _milkTank;
+    private IHeater _heater;
+    private IGrinder _grinder;
+
+    public CoffeeMachine(
+        IWaterTank waterTank,
+        IBeanContainer beanContainer,
+        IMilkTank milkTank,
+        IHeater heater,
+        IGrinder grinder)
+    {
+        _waterTank = waterTank;
+        _beanContainer = beanContainer;
+        _milkTank = milkTank;
+        _heater = heater;
+        _grinder = grinder;
+    }
+
+    public bool MakeCoffee(CoffeeButton button)
+    {
+        CoffeeRecipe recipe = button switch
+        {
+            CoffeeButton.Espresso => new EspressoRecipe(),
+            CoffeeButton.Latte => new LatteRecipe()
+        };
+
+        return Brew(recipe);
+    }
+
+    private bool Brew(CoffeeRecipe recipe)
+    {
+        if (!CheckResources(recipe))
+        {
+            return false;
+        }
+
+        _heater.HeatTo(recipe.Temperature);
+
+        _grinder.Grind(recipe.Beans);
+
+        _waterTank.Take(recipe.Water);
+        _beanContainer.Take(recipe.Beans);
+
+        if (recipe.Milk > 0)
+        {
+            _milkTank.Take(recipe.Milk);
+        }
+
+        PourCoffee();
+
+        return true;
+    }
+
+    private bool CheckResources(CoffeeRecipe recipe)
+    {
+        if (_waterTank.Water < recipe.Water)
+        {
+            return false;
+        }
+
+        if (_beanContainer.Volume < recipe.Beans)
+        {
+            return false;
+        }
+
+        if (_milkTank.Milk < recipe.Milk)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    private void PourCoffee()
+    {
+        Log.Information("Кофе готов!");
+    }
+}
