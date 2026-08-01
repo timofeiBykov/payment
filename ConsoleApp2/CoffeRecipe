@@ -1,4 +1,4 @@
-public class CoffeRecipe
+public abstract class CoffeRecipe
 {
 	public int Water {get; init;}
 public int Beans {get; init;}
