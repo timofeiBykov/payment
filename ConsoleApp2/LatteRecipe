@@ -1,0 +1,10 @@
+public class LatteRecipe : CoffeRecipe
+{
+	public class LatteRecipe()
+   {
+	    Water = 40;
+    	Beans = 6;
+    	Milk = 150;
+    	Temperature = 92;
+   }
+}
