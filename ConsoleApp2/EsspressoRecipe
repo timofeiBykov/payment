@@ -1,0 +1,11 @@
+public class EsspressoRecipe : CoffeRecipe
+{
+	public EspressoRecipe()
+ {
+	  Water = 40;
+  	Beans = 8;
+  	Milk = 0;
+  	Temperature = 95;
+ }
+
+}
