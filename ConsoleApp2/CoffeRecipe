@@ -1,0 +1,7 @@
+public class CoffeRecipe
+{
+	public int Water {get; init;}
+public int Beans {get; init;}
+public int Milk {get; init;}
+public int Temperature {get; init;}
+}
