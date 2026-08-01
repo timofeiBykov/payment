@@ -1,0 +1,5 @@
+public interface IWaterTank
+{
+	int Water {get;}
+	void Take(int ml);
+}
