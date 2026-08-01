@@ -1,0 +1,5 @@
+public interface IMilkTank
+{
+	int Milk {get;}
+	void Take(int ml);
+}
