@@ -1,0 +1,6 @@
+public enum CoffeButton
+{
+	Espresso,
+	Latte,
+	Capputino
+}
